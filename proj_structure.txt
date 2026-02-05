@@ -1,0 +1,8 @@
+your-project-folder/
+│
+├── app.py                    # Main Streamlit app
+├── requirements.txt          # Python dependencies
+├── setup.sh                  # Setup script  for Linux env (optional)
+├── bp_models/
+│   └── bP_model.pickle      # Your trained model
+└── BP.csv                    # Your dataset (optional, for reference)
