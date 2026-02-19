@@ -135,7 +135,8 @@ if model is not None:
     weight = st.sidebar.number_input("Weight (kg)", min_value=30, max_value=200, value=70, step=1)
     
     if height > 0:
-        bmi = weight / ((height/100) ** 2)
+        bmi = weight / (height ** 2) # height in meters
+        #bmi = weight / ((height/100) ** 2)
         st.sidebar.metric("BMI", f"{bmi:.1f}")
         
         if bmi < 18.5:
@@ -173,4 +174,5 @@ if model is not None:
     st.caption("AI Model: Random Forest Classifier | Data: Clinical BP Measurements")
     
 else:
+
     st.error("Unable to load the prediction model. Please check the model file.")
